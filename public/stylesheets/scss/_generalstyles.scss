@@ -1,0 +1,27 @@
+$danger: #f71505;
+$border: #d3d3d3;
+$weight1: #222831;
+$weight2: #393e46;
+$weight3: #00adb5;
+$weight4: #eeeeee;
+
+$fontHeadings: BebasNeue;
+$fontNormal: Abel;
+
+@mixin fontSetter($fontfam, $fontsize, $fontcolor: black){
+    font-family: $fontfam;
+    font-size: $fontsize;
+    color: $fontcolor;
+}
+
+@mixin boxSetter($padding: 0, $margin: 0, $border: 0 solid black, $width: 100%){
+    padding: $padding;
+    margin: $margin;
+    width: $width;
+    border: $border;
+}
+
+%mpzero{
+    margin: 0;
+    padding: 0;
+}

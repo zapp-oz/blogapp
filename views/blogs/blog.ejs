@@ -1,0 +1,30 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/blogPost.css">
+
+<div class="container">
+    <div id="blogPost-heading-container">
+        <h2 class="blogPost-heading"><%= blog.title %></h2>
+    </div>
+    <% if(locals.loggedInUser && blog.author._id.equals(locals.loggedInUser._id)){ %>
+        <div id="blogPost-options">
+            <a href="/blogPost/<%=blog._id%>/edit" id="blogPost-edit-link">
+                <span class="blogPost-btn">Edit</span>
+            </a>
+            <form action="/blogPost/<%=blog._id%>/delete?_method=DELETE" method="POST" id="blogPost-delete-form">
+                <button class="blogPost-btn">Delete post</button>
+            </form>
+        </div>
+    <% } %>
+    <div id="blogPost-author">
+        <span class="blogPost-normal">
+            <em>By <a href="/user/<%=blog.author._id%>"><%= blog.author.username %>.</a></em>
+        </span>
+        <span class="blogPost-normal">Date: <%- blog.date.getDate() %></span>
+    </div>
+    <div id="blogPost">
+        <%- blog.content %>
+    </div>
+</div>
+
+<%- include("./../partials/footer") %>

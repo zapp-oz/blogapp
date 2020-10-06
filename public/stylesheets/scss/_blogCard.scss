@@ -1,0 +1,21 @@
+@import "_generalstyles";
+
+#blog-card{
+    @include boxSetter(1.0vh 0.5vw, 3.0vh 1.5vw, 2px solid $weight2, 25%);
+    text-decoration: none;
+    background-color: $weight4;
+}
+
+#blog-cd-img{
+    width: 100%;
+    height: 50.0vh;
+    border: 2px solid $weight2;
+}
+
+.blog-cd-normal{
+    @include fontSetter($fontNormal, 18px, $weight3);
+}
+
+.blog-cd-heading{
+    @include fontSetter($fontHeadings, 26px, $weight3);
+}

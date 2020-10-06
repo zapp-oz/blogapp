@@ -1,0 +1,30 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/editBlog.css">
+<!-- Shift this script to scrriptsin public-->
+<script>
+    tinymce.init({
+        selector: "#editor",
+        height: "90.0vh",
+        plugins : 'advlist link image lists link image',
+        toolbar: 'fontselect fontsizeselect | bold italic strikethrough | alignleft aligncenter | h1 h2 h3 | subscript superscript |' + 
+        'blockquote | link image',
+        image_uploadtab: false,
+        menubar: "",
+        placeholder: "I'm waiting for you :)"
+    });
+</script>
+
+<div id="edit-blog">
+    <h3 id="edit-blog-heading">Edit Post</h3>
+    <div id="edit-blog-form-container" class="py-5">
+        <form action="/blogPost/<%=blog.id%>?_method=PUT" method="POST" id="edit-blog-form">
+            <input type="text" name="blog[title]" value="<%=blog.title%>" id="edit-blog-title">
+            <input type="text" name="blog[imagesrc]" style="display: none;" id="edit-blog-image-url">
+            <textarea name="blog[content]" id="editor"><%=blog.content%></textarea>
+            <button id="edit-blog-btn">Update!</button>
+        </form>    
+    </div>    
+</div>
+
+<%- include("./../partials/footer") %>

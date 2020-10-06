@@ -1,0 +1,32 @@
+@import "_generalstyles";
+
+#new-blog{
+    text-align: center;
+}   
+
+.new-blog-heading{
+    @include fontSetter($fontHeadings, 34px, $weight2);
+    @include boxSetter(1.5vh 0.7vw, 3.0vh auto, 1.5px solid $weight1, 30%);
+}
+
+#new-blog-image-url{
+    display: none;
+}
+
+#new-blog-form-container{
+    @include boxSetter(1.0vh 0.5vw, 1.0vh auto, null, 100%);
+}
+
+#new-blog-form{
+    @include boxSetter(null, 0 auto, null, 90%);
+}
+
+#new-blog-title{
+    @include boxSetter(1.5vh 1.5vw, 3.0vh auto, 1.5px solid $weight1, 100%);
+}
+
+#new-blog-btn{
+    background-color: $weight4;
+    @include fontSetter($fontNormal, 18px, $weight2);
+    @include boxSetter(1.5vh 1.5vw, 2.0vh auto, 1.5px solid $weight1, 100%);
+}

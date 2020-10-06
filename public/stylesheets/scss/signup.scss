@@ -1,0 +1,34 @@
+@import "_generalstyles";
+
+.sp{
+    text-align: center;
+    background-color: $weight4;
+    box-shadow: 5px 5px 10px $weight3;
+    @include boxSetter(10.0vh, 15.0vh auto, 1.5px solid $weight2, 40%);
+}
+
+.sp-text-heading{
+    @include fontSetter($fontHeadings, 36px, $weight3);
+}
+
+.sp-text-normal{
+    @include fontSetter($fontNormal, 18px, $weight3);
+}
+
+.sp-input-field{
+    display: block;
+    @include boxSetter(5px, 10px auto, 1.5px solid $weight3, 60%);
+}
+
+.sp-sub-btn{
+    background-color: $weight4;
+    @include boxSetter(5px, 10px auto, 1.5px solid $weight3, 60%);
+}
+
+.sp-login-link{
+    &:hover{
+        text-decoration: none;
+        color: $weight3;
+    }
+}
+

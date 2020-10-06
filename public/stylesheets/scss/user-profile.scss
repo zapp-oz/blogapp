@@ -1,0 +1,13 @@
+@import "_blogCard";
+@import "_generalstyles";
+
+#pro-posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#pro-jumbotron{
+    @include boxSetter(null, 10.0vh auto, 1.5px solid $weight2, 80%);
+}

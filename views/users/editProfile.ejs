@@ -1,0 +1,14 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/editProfile.css">
+<div id="edit-pro">
+    <h3 class="edit-pro-heading">Edit <%=user.username%></h3>
+    <form action="/user?_method=PUT" method="POST">
+        <input type="text" value="<%=user.username%>" disabled class="edit-pro-input-field">
+        <input type="text" value="<%=user.email%>" disabled class="edit-pro-input-field">
+        <input type="password" placeholder="password" name="user[password]" class="edit-pro-input-field">
+        <button class="edit-pro-btn edit-pro-text-normal">Update</button>
+    </form>
+</div>
+
+<%- include("./../partials/footer") %>

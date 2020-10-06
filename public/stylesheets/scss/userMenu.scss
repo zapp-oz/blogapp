@@ -1,0 +1,44 @@
+@import "_generalstyles";
+
+#user-menu{ 
+    position: fixed;
+    z-index: 5;
+    left: 40.0vw;
+    top: 40.0vh;
+    background-color: $weight1;
+    display: none;
+    @include boxSetter(null, null, null, 20.0vw);
+    
+    ul{
+        list-style-type: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include boxSetter(0, 0, 3.5px solid $weight1, 100%);
+
+        li{
+            padding-top: 1.0vh;
+            padding-bottom: 1.0vh;
+
+            a{
+                text-decoration: none;
+                color: $weight4;
+            }
+        }
+
+        .item{
+            border-bottom: 1px solid $border;
+        }
+
+        #delete{
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            background-color: $weight1;
+            color: $danger;
+            @extend %mpzero;
+        }
+    }
+}

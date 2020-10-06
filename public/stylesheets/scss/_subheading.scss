@@ -1,0 +1,35 @@
+.bullet-point{
+    display: inline-block;
+    background-color: #000000;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+#subheading-container{
+    width: 80.0vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#heading{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+}
+
+hr{
+    display: inline-block;
+    color: #000000;
+    margin: 0;
+    vertical-align: middle;
+    border: 1.5px solid black;
+
+    &#hr-left{
+        width: 10%;
+    }
+
+    &#hr-right{
+        width: calc(75% - 28px);
+    }
+}

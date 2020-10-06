@@ -1,0 +1,13 @@
+@import "_generalStyles";
+
+.navbar{
+    background-color: $weight4;
+}
+
+.nv-text-heading{
+    @include fontSetter($fontHeadings, 20px, $weight1);
+
+    &:hover{
+        color: $weight1;    
+    }
+}

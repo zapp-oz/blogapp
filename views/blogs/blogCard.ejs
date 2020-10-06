@@ -1,0 +1,8 @@
+<% blogs.forEach((blog) => { %>
+    <a href="/blogPost/<%=blog._id%>" id="blog-card">
+        <div class="blog-cd-normal">Location comes here</div>
+        <p class="blog-cd-heading"><strong><%=blog.title%></strong></p>
+        <img src="<%=blog.imagesrc%>" id="blog-cd-img">
+        <div class="blog-cd-normal"><p><em>authored by <span><%= blog.author.username %></span>.</em> (<%= blog.date %>)</p></div>
+    </a>
+<% }) %>     

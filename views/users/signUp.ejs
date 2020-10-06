@@ -1,0 +1,15 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/signup.css">
+<div class="container sp">
+    <h3 class="sp-text-heading">Sign Up</h3>
+    <form action="/signUp" method="POST">
+        <input type="text" placeholder="username" name="user[username]" class="sp-input-field" required>
+        <input type="text" placeholder="email" name="user[email]" class="sp-input-field" required>
+        <input type="password" placeholder="password" name="user[password]" class="sp-input-field" required>
+        <button class="sp-text-normal sp-sub-btn">Sign Up</button>
+    </form>
+    <a href="/login" class="sp-text-normal sp-login-link">Already registered! Login here.</a>
+</div>
+
+<%- include("./../partials/footer") %>

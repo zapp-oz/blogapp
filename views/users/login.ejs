@@ -1,0 +1,14 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/login.css">
+<div class="container lg">
+    <h3 class="lg-text-heading">Login</h3>
+    <form action="/login" method="POST">
+        <input type="text" placeholder="username" name="user[username]" class="lg-input-field" required>
+        <input type="password" placeholder="password" name="user[password]" class="lg-input-field" required>
+        <button class="lg-text-normal lg-sub-btn">Login</button>
+    </form>
+    <a href="/signUp" class="lg-text-normal lg-signup-link">Not registered! Sign up now.</a>
+</div>
+
+<%- include("./../partials/footer") %>

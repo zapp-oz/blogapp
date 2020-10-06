@@ -1,0 +1,28 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/user-profile.css">
+
+<div class="jumbotron" id="pro-jumbotron">
+    <div class="row justify-content-around">
+        <div class="col-8 col-md-3">
+            <span id="profile-pic"></span>
+            <!--Add the user profile pic-->
+        </div>
+        <div class="col-8 col-md-6">
+            <h2 class="pro-heading"><%= user.username.toUpperCase() %></h2>
+            <a href="#" class="d-md-none">Stats</a>
+        </div>
+        <div class="d-none d-md-block col-md-3">
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="pro-posts">
+        <%- include("./../blogs/blogCard") %>
+    </div>
+</div>
+
+<%- include("./../partials/footer") %>

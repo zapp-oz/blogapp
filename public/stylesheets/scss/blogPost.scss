@@ -1,0 +1,53 @@
+@import "_generalstyles";
+
+#blogPost-heading-container{
+    @include boxSetter(2.5vh 5.0vw, 3.0vh auto, solid 1.5px $weight1, 70%);
+    background-color: $weight2;
+    box-shadow: 3px 3px 7px $weight3;
+}
+
+.blogPost-heading{
+    text-align: center;
+    @include fontSetter($fontHeadings, 30px, $weight4);
+}
+
+#blogPost-options{
+    display: flex;
+    justify-content: center;
+    @include boxSetter(null, 0.5vh auto, null, 70%);
+}
+
+#blogPost-delete-form{
+    display: inline-block;
+}
+
+#blogPost-edit-link{
+    text-align: center;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.blogPost-btn{
+    display: inline-block;
+    @include boxSetter(1.5vh 1.0vw, 0.5vh 4.0vw, 1.5px solid $weight1, 8.0vw);
+    @include fontSetter($fontNormal, 18px, $weight3);
+    background-color: $weight2;
+    box-shadow: 2px 2px 2px $weight3;
+}
+
+#blogPost-author{
+    @include boxSetter(null, 1.0vh auto, null, 70%);
+    @include fontSetter($fontNormal, 18px, $weight2);
+
+    a{
+        color: $weight3;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+#blogPost{
+    @include boxSetter(4.0vh 6.0vw, 5.0vh auto, 3px solid $weight1, null);
+}

@@ -1,0 +1,48 @@
+#edit-blog {
+  text-align: center;
+}
+
+#edit-blog-heading {
+  font-family: BebasNeue;
+  font-size: 34px;
+  color: #393e46;
+  padding: 1.5vh 0.7vw;
+  margin: 3vh auto;
+  width: 30%;
+  border: 1.5px solid #222831;
+}
+
+#edit-blog-image-url {
+  display: none;
+}
+
+#edit-blog-form-container {
+  padding: 1vh 0.5vw;
+  margin: 1vh auto;
+  width: 100%;
+}
+
+#edit-blog-form {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#edit-blog-title {
+  padding: 1.5vh 1.5vw;
+  margin: 3vh auto;
+  width: 100%;
+  border: 1.5px solid #222831;
+}
+
+#edit-blog-btn {
+  background-color: #eeeeee;
+  font-family: Abel;
+  font-size: 18px;
+  color: #393e46;
+  padding: 1.5vh 1.5vw;
+  margin: 2vh auto;
+  width: 100%;
+  border: 1.5px solid #222831;
+}
+
+/*# sourceMappingURL=editblog.css.map */

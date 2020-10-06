@@ -1,0 +1,34 @@
+<%- include("./../partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/css/newPost.css">
+<!-- Shift this script to scripts in public-->
+<script>
+    tinymce.init({
+        selector: "#editor",
+        height: "90.0vh",
+        plugins : 'advlist link image lists link image',
+        toolbar: 'fontselect fontsizeselect | bold italic strikethrough | alignleft aligncenter | h1 h2 h3 | subscript superscript |' + 
+        'blockquote | link image',
+        image_uploadtab: false,
+        menubar: "",
+        placeholder: "I'm waiting for you :)",
+        content_css: ["/stylesheets/css/fonts.css"],
+        font_formats: 'Bungee Shade=BungeeShade; Monton=Monoton-Regular;Gentium Basic=GentiumBasic-Italic,GentiumBasic-Regular; Lobster Two=LobsterTwo-Regular,LobsterTwo-Italic; Sacramento=Sacramento-Regular'
+    });
+</script>
+
+<div id="new-blog" class="container">
+    <h3 class="new-blog-heading">New Post!</h3>
+    <div id="new-blog-form-container">
+        <form action="/blogPost" method="POST" id="new-blog-form">
+            <input type="text" name="blog[title]" placeholder="Title" required id="new-blog-title">
+            <input type="text" name="blog[imagesrc]" id="new-blog-image-url">
+            <textarea name="blog[content]" id="editor"></textarea>
+            <button id="new-blog-btn" >Post!</button>
+        </form>    
+    </div>    
+</div>
+
+<script src="/scripts/newPost.js"></script>
+
+<%- include("./../partials/footer") %>
